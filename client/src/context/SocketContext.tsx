@@ -18,7 +18,8 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   useEffect(() => {
     // Connect to server Socket.IO
-    const newSocket = io('/', {
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || '/';
+    const newSocket = io(socketUrl, {
       transports: ['websocket', 'polling'],
       autoConnect: true,
     });
