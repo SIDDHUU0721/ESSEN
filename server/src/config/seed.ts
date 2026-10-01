@@ -15,7 +15,7 @@ import { Delivery } from '../models/Delivery';
 import { Review } from '../models/Review';
 import { generateInvoiceNumber, generateOrderNumber, generateSecureToken, generateVoucherCode } from '../utils/qr';
 
-export const seedDatabase = async (): Promise<void> => {
+export const seedDatabase = async (exitOnComplete: boolean = true): Promise<void> => {
   try {
     console.log('[Seed] Connecting to MongoDB...');
     await mongoose.connect(config.mongoUri);
@@ -884,10 +884,15 @@ export const seedDatabase = async (): Promise<void> => {
     });
 
     console.log('[Seed] Seeding Completed Successfully! Fresh platform initialized with 0 coins.');
-    process.exit(0);
+    if (exitOnComplete) {
+      process.exit(0);
+    }
   } catch (error) {
     console.error('[Seed Error]:', error);
-    process.exit(1);
+    if (exitOnComplete) {
+      process.exit(1);
+    }
+    throw error;
   }
 };
 

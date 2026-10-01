@@ -11,6 +11,8 @@ import { initSocket } from './config/socket';
 import { errorHandler } from './middleware/errorHandler';
 import { apiRateLimiter } from './middleware/rateLimiter';
 import apiRouter from './routes';
+import { Restaurant } from './models/Restaurant';
+import { seedDatabase } from './config/seed';
 
 const app: Application = express();
 const server = http.createServer(app);
@@ -88,6 +90,15 @@ app.use(errorHandler);
 // 7. Start Server Listener
 const startServer = async () => {
   await connectDB();
+  try {
+    const count = await Restaurant.countDocuments();
+    if (count === 0) {
+      console.log('⚡ [Auto-Seed] No restaurants found. Seeding sample restaurants and accounts...');
+      await seedDatabase(false);
+    }
+  } catch (err) {
+    console.warn('[Auto-Seed] Skipping automatic seed:', err);
+  }
   server.listen(config.port, () => {
     console.log(`=======================================================`);
     console.log(`🚀 ESSEN Server running at http://localhost:${config.port}`);

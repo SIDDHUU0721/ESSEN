@@ -13,8 +13,18 @@ import supportRoutes from './supportRoutes';
 import analyticsRoutes from './analyticsRoutes';
 import adminRoutes from './adminRoutes';
 import essenAiRoutes from './essenAiRoutes';
+import { seedDatabase } from '../config/seed';
 
 const router = Router();
+
+router.all('/seed', async (_req, res) => {
+  try {
+    await seedDatabase(false);
+    res.json({ success: true, message: 'Database seeded successfully with sample restaurants, menus, and test accounts!' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 router.use('/auth', authRoutes);
 router.use('/restaurants', restaurantRoutes);
