@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: essen-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: essen_db
+    networks:
+      - essen-network
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: essen-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - essen-network
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: essen-server
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017/essen_db
+      - REDIS_URL=redis://redis:6379
+      - CLIENT_URL=http://localhost:5173
+      - JWT_SECRET=essen_docker_production_jwt_secret_999!
+      - JWT_REFRESH_SECRET=essen_docker_production_refresh_secret_888!
+      - PAYMENT_PROVIDER=mock
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - essen-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: essen-client
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - server
+    networks:
+      - essen-network
+
+volumes:
+  mongo_data:
+  redis_data:
+
+networks:
+  essen-network:
+    driver: bridge

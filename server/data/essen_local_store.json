@@ -1,0 +1,1354 @@
+{
+  "users": {
+    "customer@essen.com": {
+      "id": "usr_cust_1",
+      "name": "Customer 1",
+      "email": "customer@essen.com",
+      "phone": "9876543210",
+      "role": "customer",
+      "password": "password123",
+      "preferences": {
+        "foodType": "any",
+        "favoriteCuisines": [
+          "North Indian",
+          "Biryani"
+        ],
+        "spicinessPreference": "spicy"
+      },
+      "isActive": true
+    },
+    "manager@essen.com": {
+      "id": "usr_mgr_1",
+      "name": "Manager 1",
+      "email": "manager@essen.com",
+      "phone": "9876501234",
+      "role": "manager",
+      "password": "password123",
+      "restaurantCode": "EST-ROY-1001",
+      "restaurantId": "rest_1",
+      "isActive": true
+    },
+    "waiter@essen.com": {
+      "id": "usr_wtr_1",
+      "name": "Employee 1",
+      "email": "waiter@essen.com",
+      "phone": "9876512345",
+      "role": "waiter",
+      "password": "password123",
+      "restaurantId": "rest_1",
+      "isActive": true
+    },
+    "driver@essen.com": {
+      "id": "usr_drv_1",
+      "name": "Employee 2",
+      "email": "driver@essen.com",
+      "phone": "9876523456",
+      "role": "delivery_partner",
+      "password": "password123",
+      "isActive": true
+    },
+    "admin@essen.com": {
+      "id": "usr_adm_1",
+      "name": "Admin 1",
+      "email": "admin@essen.com",
+      "phone": "9876534567",
+      "role": "admin",
+      "password": "admin123",
+      "isActive": true
+    },
+    "alice@example.com": {
+      "id": "usr_1790869239142",
+      "name": "Alice Customer",
+      "email": "alice@example.com",
+      "phone": "9123456780",
+      "role": "customer",
+      "password": "securePassword123",
+      "preferences": {
+        "foodType": "any",
+        "favoriteCuisines": [],
+        "spicinessPreference": "medium"
+      },
+      "restaurantId": "rest_1",
+      "restaurantCode": "EST-ROY-1001",
+      "isActive": true
+    },
+    "sid@gmail.com": {
+      "id": "usr_1790869790802",
+      "name": "sid@gmail.com",
+      "email": "sid@gmail.com",
+      "phone": "9995558884",
+      "role": "customer",
+      "password": "password123",
+      "preferences": {
+        "foodType": "any"
+      },
+      "restaurantId": "rest_1",
+      "restaurantCode": "EST-ROY-1001",
+      "isActive": true
+    },
+    "suresh@essen.com": {
+      "id": "usr_1790872090186",
+      "name": "Suresh Waiter",
+      "email": "suresh@essen.com",
+      "phone": "9876599999",
+      "role": "waiter",
+      "password": "password123",
+      "preferences": {
+        "foodType": "any"
+      },
+      "restaurantId": "rest_1",
+      "restaurantCode": "EST-ROY-1001",
+      "isActive": true
+    }
+  },
+  "restaurants": [
+    {
+      "_id": "rest_1",
+      "name": "The Royal Nawabi Kitchen",
+      "slug": "the-royal-nawabi-kitchen",
+      "restaurantCode": "EST-ROY-1001",
+      "description": "Heritage Awadhi and Mughal delicacies cooked in traditional slow dum pots with hand-ground spices.",
+      "tagline": "Legacy of Royal Mughal & Awadhi Flavors",
+      "cuisine": [
+        "North Indian",
+        "Mughlai",
+        "Biryani",
+        "Kebabs"
+      ],
+      "foodType": "both",
+      "ambience": [
+        "Fine Dining",
+        "Heritage",
+        "Family"
+      ],
+      "restaurantType": "fine_dining",
+      "address": {
+        "street": "14 Khader Nawaz Khan Road",
+        "area": "Nungambakkam",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600034"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2435,
+          13.0604
+        ]
+      },
+      "contact": {
+        "phone": "044-28331122",
+        "email": "nawabi@royalessen.com"
+      },
+      "businessInfo": {
+        "gstin": "33AAACR1234F1Z1",
+        "fssaiLicense": "10019042004561"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200",
+        "logo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=300",
+        "gallery": [
+          "https://images.unsplash.com/photo-1544025162-d76694265947?w=800",
+          "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800"
+        ]
+      },
+      "rating": 4.8,
+      "reviewCount": 420,
+      "averagePriceForTwo": 650,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 8,
+        "coinsPerOrderMax": 10,
+        "targetCoins": 5000,
+        "rewardTitle": "Free Royal Nawabi Dum Feast Combo",
+        "rewardDescription": "Exclusive 4-course royal feast featuring Murgh Dum Biryani, Galouti Kebabs, Roomali Roti, and Shahi Phirni.",
+        "comboItems": [
+          "Royal Dum Biryani",
+          "Galouti Kebabs (4 pcs)",
+          "2 Roomali Rotis",
+          "Shahi Saffron Phirni"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.331Z"
+    },
+    {
+      "_id": "rest_2",
+      "name": "Trattoria Bella Napoli",
+      "slug": "trattoria-bella-napoli",
+      "restaurantCode": "EST-BEL-2002",
+      "description": "Authentic wood-fired Neapolitan pizzas, handmade fresh artisanal pasta, and Tuscan wines.",
+      "tagline": "Woodfired Italian Perfection",
+      "cuisine": [
+        "Italian",
+        "Pizza",
+        "Pasta",
+        "European"
+      ],
+      "foodType": "both",
+      "ambience": [
+        "Casual",
+        "Romantic",
+        "Outdoor"
+      ],
+      "restaurantType": "cafe",
+      "address": {
+        "street": "28 Chamiers Road",
+        "area": "R.A. Puram",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600028"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2522,
+          13.0245
+        ]
+      },
+      "contact": {
+        "phone": "044-24358899",
+        "email": "ciao@bellanapoli.com"
+      },
+      "businessInfo": {
+        "gstin": "33AABCT9876E1Z5",
+        "fssaiLicense": "10019042004562"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200",
+        "logo": "https://images.unsplash.com/photo-1579684947550-22e945225d9a?w=300",
+        "gallery": []
+      },
+      "rating": 4.7,
+      "reviewCount": 310,
+      "averagePriceForTwo": 550,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 6,
+        "coinsPerOrderMax": 10,
+        "targetCoins": 5000,
+        "rewardTitle": "Free Woodfired Gourmet Pizza & Tiramisu Combo",
+        "rewardDescription": "12-inch artisanal sourdough pizza paired with classic espresso mascarpone tiramisu.",
+        "comboItems": [
+          "12-inch Woodfired Margherita",
+          "Classic Tiramisu",
+          "Peach Iced Tea"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.332Z"
+    },
+    {
+      "_id": "rest_3",
+      "name": "Sattvam Pure Vegetarian Haven",
+      "slug": "sattvam-pure-vegetarian-haven",
+      "restaurantCode": "EST-SAT-3003",
+      "description": "Pure satvic gourmet vegetarian feast prepared with farm-fresh organic produce and clarified butter.",
+      "tagline": "Pure Satvic Gourmet Dining",
+      "cuisine": [
+        "South Indian",
+        "North Indian",
+        "Pure Veg",
+        "Healthy"
+      ],
+      "foodType": "pure-veg",
+      "ambience": [
+        "Family",
+        "Peaceful",
+        "Traditional"
+      ],
+      "restaurantType": "family",
+      "address": {
+        "street": "55 TTK Road",
+        "area": "Alwarpet",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600018"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2514,
+          13.0338
+        ]
+      },
+      "contact": {
+        "phone": "044-24997788",
+        "email": "contact@sattvam.com"
+      },
+      "businessInfo": {
+        "gstin": "33AADCS5544K1Z3",
+        "fssaiLicense": "10019042004563"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1200",
+        "logo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=300",
+        "gallery": []
+      },
+      "rating": 4.9,
+      "reviewCount": 560,
+      "averagePriceForTwo": 350,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 5,
+        "coinsPerOrderMax": 8,
+        "targetCoins": 5000,
+        "rewardTitle": "Free Royal Sattvam Grand Thali Combo",
+        "rewardDescription": "An opulent 14-dish satvic thali with paneer makhani, dal makhani, stuffed kulchas, and saffron kheer.",
+        "comboItems": [
+          "Grand Sattvam Thali",
+          "Saffron Rabdi",
+          "Dry Fruit Lassi"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.332Z"
+    },
+    {
+      "_id": "rest_4",
+      "name": "Tokyo Blossom Ramen & Izakaya",
+      "slug": "tokyo-blossom-ramen",
+      "restaurantCode": "EST-TOK-4004",
+      "description": "Rich 18-hour slow simmered broths, handmade bouncy ramen noodles, gyoza, and Japanese yakitori.",
+      "tagline": "Artisanal Ramen & Japanese Izakaya",
+      "cuisine": [
+        "Japanese",
+        "Asian",
+        "Ramen",
+        "Sushi"
+      ],
+      "foodType": "both",
+      "ambience": [
+        "Modern",
+        "Cozy",
+        "Casual"
+      ],
+      "restaurantType": "cafe",
+      "address": {
+        "street": "18 Gandhi Nagar 2nd Main",
+        "area": "Adyar",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600020"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2554,
+          13.0067
+        ]
+      },
+      "contact": {
+        "phone": "044-24419900",
+        "email": "tokyo@blossom.com"
+      },
+      "businessInfo": {
+        "gstin": "33AABCT3322P1Z8",
+        "fssaiLicense": "10019042004564"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200",
+        "logo": "https://images.unsplash.com/photo-1552611052-33e04de081de?w=300",
+        "gallery": []
+      },
+      "rating": 4.6,
+      "reviewCount": 280,
+      "averagePriceForTwo": 600,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 7,
+        "coinsPerOrderMax": 10,
+        "targetCoins": 5000,
+        "rewardTitle": "Free Signature Spicy Miso Ramen & Crispy Gyoza Combo",
+        "rewardDescription": "Our bestselling spicy miso ramen paired with pan-fried chicken gyoza and Japanese matcha iced tea.",
+        "comboItems": [
+          "Spicy Miso Ramen",
+          "Crispy Gyoza (6 pcs)",
+          "Matcha Green Iced Tea"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.332Z"
+    },
+    {
+      "_id": "rest_5",
+      "name": "El Fuego Mexican Cantina",
+      "slug": "el-fuego-mexican-cantina",
+      "restaurantCode": "EST-FUE-5005",
+      "description": "Sizzling fajitas, slow-cooked carnitas tacos, guacamole prepared tableside, and warm cinnamon churros.",
+      "tagline": "Vibrant Latin Flavors & Sizzling Cantina",
+      "cuisine": [
+        "Mexican",
+        "Tacos",
+        "Burritos",
+        "Latin American"
+      ],
+      "foodType": "both",
+      "ambience": [
+        "Festive",
+        "Casual",
+        "Lively"
+      ],
+      "restaurantType": "casual_dining",
+      "address": {
+        "street": "42 Phoenix Market City, OMR",
+        "area": "Velachery",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600042"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2176,
+          12.9915
+        ]
+      },
+      "contact": {
+        "phone": "044-22445566",
+        "email": "hola@elfuego.com"
+      },
+      "businessInfo": {
+        "gstin": "33AABCE1122Q1Z9",
+        "fssaiLicense": "10019042004565"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200",
+        "logo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300",
+        "gallery": []
+      },
+      "rating": 4.7,
+      "reviewCount": 195,
+      "averagePriceForTwo": 500,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 6,
+        "coinsPerOrderMax": 10,
+        "targetCoins": 5000,
+        "rewardTitle": "Free Cantina Supreme Taco Fiesta Combo",
+        "rewardDescription": "Trio of handcrafted street tacos with fresh guacamole and Mexican spiced hot cocoa.",
+        "comboItems": [
+          "Street Tacos Trio",
+          "Loaded Nachos",
+          "Warm Cinnamon Churros"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.332Z"
+    },
+    {
+      "_id": "rest_6",
+      "name": "Le Petit Parisien Patisserie & Café",
+      "slug": "le-petit-parisien-patisserie",
+      "restaurantCode": "EST-PAR-6006",
+      "description": "Flaky pure French butter croissants, delicate fruit tarts, artisan sourdough toast, and specialty espresso.",
+      "tagline": "Artisanal French Viennoiserie & Café",
+      "cuisine": [
+        "Bakery",
+        "French",
+        "Desserts",
+        "Coffee",
+        "European"
+      ],
+      "foodType": "both",
+      "ambience": [
+        "Chic",
+        "Cozy",
+        "Aesthetic"
+      ],
+      "restaurantType": "cafe",
+      "address": {
+        "street": "7 Wallace Garden 3rd Street",
+        "area": "Nungambakkam",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600006"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          80.2478,
+          13.0642
+        ]
+      },
+      "contact": {
+        "phone": "044-28223344",
+        "email": "bonjour@lepetitparisien.com"
+      },
+      "businessInfo": {
+        "gstin": "33AABCL4433R1Z7",
+        "fssaiLicense": "10019042004566"
+      },
+      "images": {
+        "cover": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200",
+        "logo": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300",
+        "gallery": []
+      },
+      "rating": 4.9,
+      "reviewCount": 340,
+      "averagePriceForTwo": 450,
+      "status": "OPEN",
+      "isVerified": true,
+      "services": {
+        "dineIn": true,
+        "delivery": true,
+        "takeaway": true,
+        "tableBooking": true
+      },
+      "rewardsSettings": {
+        "isEnabled": true,
+        "coinsPerOrderMin": 5,
+        "coinsPerOrderMax": 9,
+        "targetCoins": 5000,
+        "rewardTitle": "Free French Patisserie High-Tea Platter",
+        "rewardDescription": "Artisanal butter almond croissant, raspberry macaron duo, and Madagascar vanilla bean cappuccino.",
+        "comboItems": [
+          "Almond Butter Croissant",
+          "Raspberry Macarons",
+          "Specialty Flat White Coffee"
+        ]
+      },
+      "createdAt": "2026-10-01T15:37:57.332Z"
+    }
+  ],
+  "categories": [
+    {
+      "_id": "cat_1",
+      "restaurant": "rest_1",
+      "name": "Royal Dum Biryanis",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "_id": "cat_2",
+      "restaurant": "rest_1",
+      "name": "Signature Kebabs & Starters",
+      "sortOrder": 2,
+      "isActive": true
+    },
+    {
+      "_id": "cat_3",
+      "restaurant": "rest_1",
+      "name": "Rich Curries & Gravies",
+      "sortOrder": 3,
+      "isActive": true
+    },
+    {
+      "_id": "cat_4",
+      "restaurant": "rest_2",
+      "name": "Wood-Fired Neapolitan Pizzas",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "_id": "cat_5",
+      "restaurant": "rest_2",
+      "name": "Handmade Fresh Pastas",
+      "sortOrder": 2,
+      "isActive": true
+    },
+    {
+      "_id": "cat_6",
+      "restaurant": "rest_3",
+      "name": "Satvic Gourmet Thalis & Curries",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "_id": "cat_7",
+      "restaurant": "rest_4",
+      "name": "Craft Ramen Bowls & Noodles",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "_id": "cat_8",
+      "restaurant": "rest_5",
+      "name": "Street Tacos & Burritos",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "_id": "cat_9",
+      "restaurant": "rest_6",
+      "name": "Artisan Pastries & Viennoiserie",
+      "sortOrder": 1,
+      "isActive": true
+    }
+  ],
+  "menuItems": [
+    {
+      "_id": "dish_1",
+      "restaurant": "rest_1",
+      "category": "cat_1",
+      "name": "Royal Awadhi Murgh Dum Biryani",
+      "description": "Tender succulent chicken marinated in saffron, rose water, and 24 royal spices, dum cooked with aged basmati rice.",
+      "price": 280,
+      "foodType": "non-vegetarian",
+      "tasteProfile": "spicy",
+      "cuisine": "North Indian",
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.9,
+      "orderCount": 840,
+      "preparationTimeMinutes": 25,
+      "isAvailable": true,
+      "customizationGroups": [
+        {
+          "name": "Portion Size",
+          "type": "single",
+          "isRequired": true,
+          "options": [
+            {
+              "name": "Regular (Serves 1)",
+              "price": 0
+            },
+            {
+              "name": "Large (Serves 2)",
+              "price": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "dish_2",
+      "restaurant": "rest_1",
+      "category": "cat_1",
+      "name": "Subz Nizami Saffron Biryani",
+      "description": "Seasonal baby vegetables, paneer cubes, and golden raisins layered with fragrant saffron basmati rice.",
+      "price": 240,
+      "foodType": "vegetarian",
+      "tasteProfile": "mild",
+      "cuisine": "North Indian",
+      "image": "https://images.unsplash.com/photo-1642821373181-696a54913e93?w=800",
+      "isTrending": true,
+      "isBestseller": false,
+      "rating": 4.8,
+      "orderCount": 420,
+      "preparationTimeMinutes": 20,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_3",
+      "restaurant": "rest_1",
+      "category": "cat_2",
+      "name": "Melt-in-Mouth Galouti Kebabs",
+      "description": "Minced lamb infused with 160 secret aromatic herbs and raw papaya, pan-seared to silk-soft perfection on a mahi tawa.",
+      "price": 290,
+      "foodType": "non-vegetarian",
+      "tasteProfile": "spicy",
+      "cuisine": "North Indian",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.9,
+      "orderCount": 650,
+      "preparationTimeMinutes": 20,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_4",
+      "restaurant": "rest_2",
+      "category": "cat_4",
+      "name": "Margherita Verace D.O.P Pizza",
+      "description": "San Marzano tomato sauce, fresh buffalo mozzarella, fresh sweet basil leaves, and cold-pressed extra virgin olive oil.",
+      "price": 360,
+      "foodType": "vegetarian",
+      "tasteProfile": "mild",
+      "cuisine": "Italian",
+      "image": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.9,
+      "orderCount": 520,
+      "preparationTimeMinutes": 15,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_5",
+      "restaurant": "rest_3",
+      "category": "cat_6",
+      "name": "Royal Sattvam Grand Thali",
+      "description": "Elaborate satvic feast with paneer makhani, dal makhani, fresh vegetable korma, saffron pulao, stuffed kulchas, and saffron kheer.",
+      "price": 320,
+      "foodType": "vegetarian",
+      "tasteProfile": "medium",
+      "cuisine": "South Indian",
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.9,
+      "orderCount": 710,
+      "preparationTimeMinutes": 15,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_6",
+      "restaurant": "rest_4",
+      "category": "cat_7",
+      "name": "Spicy Tonkotsu Chashu Ramen",
+      "description": "18-hour slow-simmered rich broth with tender braised chashu pork, seasoned ajitsuke tamago egg, bamboo shoots, and scallions.",
+      "price": 380,
+      "foodType": "non-vegetarian",
+      "tasteProfile": "spicy",
+      "cuisine": "Japanese",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.8,
+      "orderCount": 490,
+      "preparationTimeMinutes": 20,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_7",
+      "restaurant": "rest_5",
+      "category": "cat_8",
+      "name": "Birria Beef Street Tacos Trio",
+      "description": "Crispy corn tortillas dipped in chili broth, loaded with melted Oaxaca cheese and tender slow-braised shredded beef, served with consommé.",
+      "price": 310,
+      "foodType": "non-vegetarian",
+      "tasteProfile": "spicy",
+      "cuisine": "Mexican",
+      "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.8,
+      "orderCount": 390,
+      "preparationTimeMinutes": 15,
+      "isAvailable": true
+    },
+    {
+      "_id": "dish_8",
+      "restaurant": "rest_6",
+      "category": "cat_9",
+      "name": "French Butter Almond Croissant",
+      "description": "Twice-baked flaky croissant with rich almond cream frangipane filling, topped with toasted sliced almonds and powdered sugar.",
+      "price": 180,
+      "foodType": "vegetarian",
+      "tasteProfile": "sweet",
+      "cuisine": "Bakery",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
+      "isTrending": true,
+      "isBestseller": true,
+      "rating": 4.9,
+      "orderCount": 620,
+      "preparationTimeMinutes": 5,
+      "isAvailable": true
+    }
+  ],
+  "tables": [
+    {
+      "_id": "tbl_rest_1_1",
+      "restaurant": "rest_1",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_1_1_3aec17e9bdf4677f1a8fa47f363f7a01"
+    },
+    {
+      "_id": "tbl_rest_1_2",
+      "restaurant": "rest_1",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_1_2_b690d1357fd278ad69e3e7c074ab3979"
+    },
+    {
+      "_id": "tbl_rest_1_3",
+      "restaurant": "rest_1",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_1_3_f82a9296eb8b1df7262fbf7776f194ee"
+    },
+    {
+      "_id": "tbl_rest_1_4",
+      "restaurant": "rest_1",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_1_4_77f7c0c0e53920a7cbfa8b3b2334f67e"
+    },
+    {
+      "_id": "tbl_rest_1_5",
+      "restaurant": "rest_1",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_1_5_091a159854706cf38562485bb4fc85c4"
+    },
+    {
+      "_id": "tbl_rest_1_6",
+      "restaurant": "rest_1",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_1_6_75aa60ceb8693cc2b71cbb9138624b92"
+    },
+    {
+      "_id": "tbl_rest_2_1",
+      "restaurant": "rest_2",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_2_1_2a6dab19a9d5f17d9ee31eb7a9f0019f"
+    },
+    {
+      "_id": "tbl_rest_2_2",
+      "restaurant": "rest_2",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_2_2_92774f837cb1307322753dccc01780de"
+    },
+    {
+      "_id": "tbl_rest_2_3",
+      "restaurant": "rest_2",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_2_3_bb8e6be0d4b3b298bdfd3b162b63319e"
+    },
+    {
+      "_id": "tbl_rest_2_4",
+      "restaurant": "rest_2",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_2_4_ae7c0edd1f29e7901caf84888f9a6c0f"
+    },
+    {
+      "_id": "tbl_rest_2_5",
+      "restaurant": "rest_2",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_2_5_e20dea66bf809ae171232662689d4ce0"
+    },
+    {
+      "_id": "tbl_rest_2_6",
+      "restaurant": "rest_2",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_2_6_252ac4d78829f25e4c0ed3d4d6c6d173"
+    },
+    {
+      "_id": "tbl_rest_3_1",
+      "restaurant": "rest_3",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_3_1_c5d23cedbe9c6fdc88a87ec5528a62a5"
+    },
+    {
+      "_id": "tbl_rest_3_2",
+      "restaurant": "rest_3",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_3_2_64d8eacc4fbfd32794302574f4c56f5d"
+    },
+    {
+      "_id": "tbl_rest_3_3",
+      "restaurant": "rest_3",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_3_3_741d1b8dc6760442c858e6e683e6feda"
+    },
+    {
+      "_id": "tbl_rest_3_4",
+      "restaurant": "rest_3",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_3_4_08a0b15f611cebf97549c970af8d7dcc"
+    },
+    {
+      "_id": "tbl_rest_3_5",
+      "restaurant": "rest_3",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_3_5_35d7fb466d925754c2285a42d6fe79ea"
+    },
+    {
+      "_id": "tbl_rest_3_6",
+      "restaurant": "rest_3",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_3_6_127edf2ab802da77b1f040d8bcd96d54"
+    },
+    {
+      "_id": "tbl_rest_4_1",
+      "restaurant": "rest_4",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_4_1_96dd28083e7ce45aadeced6480379f74"
+    },
+    {
+      "_id": "tbl_rest_4_2",
+      "restaurant": "rest_4",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_4_2_8bccfcad4212857d15e27eaea500fc63"
+    },
+    {
+      "_id": "tbl_rest_4_3",
+      "restaurant": "rest_4",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_4_3_856198e3c04aa0502d2c4760e658dbae"
+    },
+    {
+      "_id": "tbl_rest_4_4",
+      "restaurant": "rest_4",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_4_4_4c0a5c4d1cedaf3aa0725beb81e0f823"
+    },
+    {
+      "_id": "tbl_rest_4_5",
+      "restaurant": "rest_4",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_4_5_399f825fb7a60241dca1ae16994d41f3"
+    },
+    {
+      "_id": "tbl_rest_4_6",
+      "restaurant": "rest_4",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_4_6_348c0a2940fb9f3cebda6e4ac72c5816"
+    },
+    {
+      "_id": "tbl_rest_5_1",
+      "restaurant": "rest_5",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_5_1_dbe6c834862d755655f2d672baae7b90"
+    },
+    {
+      "_id": "tbl_rest_5_2",
+      "restaurant": "rest_5",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_5_2_dc29c8e4232440bc72c7461c16d1bbf1"
+    },
+    {
+      "_id": "tbl_rest_5_3",
+      "restaurant": "rest_5",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_5_3_801fd89061f93bfa6893529a08753d3a"
+    },
+    {
+      "_id": "tbl_rest_5_4",
+      "restaurant": "rest_5",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_5_4_ba5a2a56e67e81e6c6ab6d4ea7d4583c"
+    },
+    {
+      "_id": "tbl_rest_5_5",
+      "restaurant": "rest_5",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_5_5_889b35fb0bd5c93525daefd36874ded2"
+    },
+    {
+      "_id": "tbl_rest_5_6",
+      "restaurant": "rest_5",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_5_6_a7cbe775f0d22b4daa69ab2c92a50b62"
+    },
+    {
+      "_id": "tbl_rest_6_1",
+      "restaurant": "rest_6",
+      "tableNumber": 1,
+      "tableName": "Table 1 - Window Side",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_6_1_0a138a100d931102c72961b615acafec"
+    },
+    {
+      "_id": "tbl_rest_6_2",
+      "restaurant": "rest_6",
+      "tableNumber": 2,
+      "tableName": "Table 2 - Window Side",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "OCCUPIED",
+      "qrToken": "TBL_rest_6_2_da9f1b05cecd2c16f1c165f3880edcfe"
+    },
+    {
+      "_id": "tbl_rest_6_3",
+      "restaurant": "rest_6",
+      "tableNumber": 3,
+      "tableName": "Table 3 - Center Hall",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_6_3_8fd3aab674d06dd5cc1a7da3c727965e"
+    },
+    {
+      "_id": "tbl_rest_6_4",
+      "restaurant": "rest_6",
+      "tableNumber": 4,
+      "tableName": "Table 4 - Center Hall",
+      "capacity": 4,
+      "section": "rooftop",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_6_4_78c3ed0bd087eb7511f85f35241d34fa"
+    },
+    {
+      "_id": "tbl_rest_6_5",
+      "restaurant": "rest_6",
+      "tableNumber": 5,
+      "tableName": "Table 5 - Terrace View",
+      "capacity": 2,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_6_5_8e21d1afc6223ee1777486bd822293fa"
+    },
+    {
+      "_id": "tbl_rest_6_6",
+      "restaurant": "rest_6",
+      "tableNumber": 6,
+      "tableName": "Table 6 - Terrace View",
+      "capacity": 4,
+      "section": "indoor",
+      "status": "AVAILABLE",
+      "qrToken": "TBL_rest_6_6_56fcfb4b09ab4f0e6018a317a49d73b2"
+    }
+  ],
+  "orders": [
+    {
+      "_id": "ord_1790871310412",
+      "orderNumber": "ORD-104128352",
+      "customer": "usr_cust_1",
+      "customerDetails": {
+        "name": "Customer 1",
+        "phone": "9876543210",
+        "email": "customer@essen.com"
+      },
+      "restaurant": "rest_1",
+      "restaurantDetails": {
+        "name": "Multi-Restaurant Order (6 Outlets)",
+        "address": "14 Khader Nawaz Khan Road, Chennai",
+        "phone": "044-28331122"
+      },
+      "orderType": "online",
+      "deliveryAddress": {
+        "title": "Pinned on Map",
+        "street": "Pinned at Mylapore / Alwarpet / R.A. Puram",
+        "area": "Mylapore / Alwarpet / R.A. Puram",
+        "city": "Chennai",
+        "pincode": "600004",
+        "coordinates": [
+          80.2012,
+          13.0459
+        ]
+      },
+      "items": [
+        {
+          "menuItem": "dish_2",
+          "name": "Subz Nizami Saffron Biryani",
+          "restaurantId": "rest_1",
+          "restaurantName": "The Royal Nawabi Kitchen",
+          "quantity": 5,
+          "unitPrice": 240,
+          "itemTotal": 1200
+        },
+        {
+          "menuItem": "dish_3",
+          "name": "Melt-in-Mouth Galouti Kebabs",
+          "restaurantId": "rest_1",
+          "restaurantName": "The Royal Nawabi Kitchen",
+          "quantity": 3,
+          "unitPrice": 290,
+          "itemTotal": 870
+        },
+        {
+          "menuItem": "dish_7",
+          "name": "Birria Beef Street Tacos Trio",
+          "restaurantId": "rest_5",
+          "restaurantName": "El Fuego Mexican Cantina",
+          "quantity": 1,
+          "unitPrice": 310,
+          "itemTotal": 310
+        },
+        {
+          "menuItem": "dish_6",
+          "name": "Spicy Tonkotsu Chashu Ramen",
+          "restaurantId": "rest_4",
+          "restaurantName": "Tokyo Blossom Ramen & Izakaya",
+          "quantity": 1,
+          "unitPrice": 380,
+          "itemTotal": 380
+        },
+        {
+          "menuItem": "dish_5",
+          "name": "Royal Sattvam Grand Thali",
+          "restaurantId": "rest_3",
+          "restaurantName": "Sattvam Pure Vegetarian Haven",
+          "quantity": 1,
+          "unitPrice": 320,
+          "itemTotal": 320
+        },
+        {
+          "menuItem": "dish_8",
+          "name": "French Butter Almond Croissant",
+          "restaurantId": "rest_6",
+          "restaurantName": "Le Petit Parisien Patisserie & Café",
+          "quantity": 1,
+          "unitPrice": 180,
+          "itemTotal": 180
+        },
+        {
+          "menuItem": "dish_4",
+          "name": "Margherita Verace D.O.P Pizza",
+          "restaurantId": "rest_2",
+          "restaurantName": "Trattoria Bella Napoli",
+          "quantity": 1,
+          "unitPrice": 360,
+          "itemTotal": 360
+        }
+      ],
+      "pricing": {
+        "itemTotal": 3620,
+        "applicableTaxes": 181,
+        "deliveryFee": 0,
+        "packagingFee": 20,
+        "grandTotal": 3821
+      },
+      "status": "PLACED",
+      "paymentStatus": "PAID",
+      "paymentMethod": "UPI",
+      "createdAt": "2026-10-01T16:15:10.412Z"
+    },
+    {
+      "_id": "ord_1790870224243",
+      "orderNumber": "ORD-242448379",
+      "customer": "usr_1790869790802",
+      "customerDetails": {
+        "name": "sid@gmail.com",
+        "phone": "9995558884",
+        "email": "sid@gmail.com"
+      },
+      "restaurant": "rest_3",
+      "restaurantDetails": {
+        "name": "Multi-Restaurant Order (2 Outlets)",
+        "address": "55 TTK Road, Chennai",
+        "phone": "044-24997788"
+      },
+      "orderType": "online",
+      "deliveryAddress": {
+        "id": "addr_1",
+        "title": "Home",
+        "street": "42 Marina Bay View",
+        "city": "Chennai",
+        "pincode": "600004"
+      },
+      "items": [
+        {
+          "menuItem": "dish_5",
+          "name": "Royal Sattvam Grand Thali",
+          "restaurantId": "rest_3",
+          "restaurantName": "Sattvam Pure Vegetarian Haven",
+          "quantity": 1,
+          "unitPrice": 320,
+          "itemTotal": 320
+        },
+        {
+          "menuItem": "dish_8",
+          "name": "French Butter Almond Croissant",
+          "restaurantId": "rest_6",
+          "restaurantName": "Le Petit Parisien Patisserie & Café",
+          "quantity": 1,
+          "unitPrice": 180,
+          "itemTotal": 180
+        }
+      ],
+      "pricing": {
+        "itemTotal": 500,
+        "applicableTaxes": 25,
+        "deliveryFee": 0,
+        "packagingFee": 20,
+        "grandTotal": 545
+      },
+      "status": "PLACED",
+      "paymentStatus": "PAID",
+      "paymentMethod": "UPI",
+      "createdAt": "2026-10-01T15:57:04.244Z"
+    },
+    {
+      "_id": "ord_1790870115484",
+      "orderNumber": "ORD-154849258",
+      "customer": "usr_cust_1",
+      "customerDetails": {
+        "name": "Customer 1",
+        "phone": "9876543210",
+        "email": "customer@essen.com"
+      },
+      "restaurant": "rest_1",
+      "restaurantDetails": {
+        "name": "Multi-Restaurant Order (2 Outlets)",
+        "address": "14 Khader Nawaz Khan Road, Chennai",
+        "phone": "044-28331122"
+      },
+      "orderType": "online",
+      "deliveryAddress": {
+        "street": "42 Marina Bay View",
+        "city": "Chennai",
+        "pincode": "600004"
+      },
+      "items": [
+        {
+          "menuItem": "dish_101",
+          "name": "Royal Awadhi Murgh Dum Biryani",
+          "restaurantId": "rest_1",
+          "restaurantName": "The Royal Nawabi Kitchen",
+          "quantity": 2,
+          "unitPrice": 380,
+          "itemTotal": 760
+        },
+        {
+          "menuItem": "dish_201",
+          "name": "12-inch Woodfired Margherita",
+          "restaurantId": "rest_2",
+          "restaurantName": "Trattoria Bella Napoli",
+          "quantity": 1,
+          "unitPrice": 420,
+          "itemTotal": 420
+        }
+      ],
+      "pricing": {
+        "itemTotal": 1180,
+        "applicableTaxes": 59,
+        "deliveryFee": 0,
+        "packagingFee": 20,
+        "grandTotal": 1259
+      },
+      "status": "PLACED",
+      "paymentStatus": "PAID",
+      "paymentMethod": "UPI",
+      "createdAt": "2026-10-01T15:55:15.484Z"
+    }
+  ],
+  "vouchers": []
+}

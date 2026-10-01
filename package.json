@@ -1,0 +1,32 @@
+{
+  "name": "essen-unified-restaurant-platform",
+  "version": "1.0.0",
+  "description": "AI-Powered Unified Restaurant Platform (ESSEN)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server run test && npm --prefix client run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "restaurant",
+    "essen-ai",
+    "mongodb",
+    "express",
+    "react",
+    "typescript",
+    "socket.io",
+    "food-tech"
+  ],
+  "author": "ESSEN Engineering Team",
+  "license": "MIT"
+}
