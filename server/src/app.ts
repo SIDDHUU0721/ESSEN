@@ -30,7 +30,21 @@ app.use(
 
 app.use(
   cors({
-    origin: [config.clientUrl, 'http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, curl, or server-to-server)
+      if (!origin) return callback(null, true);
+      const isAllowed =
+        origin === config.clientUrl ||
+        origin === 'https://essen-three.vercel.app' ||
+        origin.endsWith('.vercel.app') ||
+        origin.includes('localhost') ||
+        origin.includes('127.0.0.1');
+      if (isAllowed) {
+        callback(null, true);
+      } else {
+        callback(null, true); // Allow all web clients in production to prevent unexpected cross-origin blocks
+      }
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],

@@ -7,7 +7,16 @@ let io: SocketIOServer | null = null;
 export const initSocket = (httpServer: HTTPServer): SocketIOServer => {
   io = new SocketIOServer(httpServer, {
     cors: {
-      origin: [config.clientUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'],
+      origin: (origin, callback) => {
+        if (!origin) return callback(null, true);
+        const isAllowed =
+          origin === config.clientUrl ||
+          origin === 'https://essen-three.vercel.app' ||
+          origin.endsWith('.vercel.app') ||
+          origin.includes('localhost') ||
+          origin.includes('127.0.0.1');
+        callback(null, isAllowed);
+      },
       methods: ['GET', 'POST'],
       credentials: true,
     },
